@@ -327,11 +327,11 @@ a{
 		font-weight: 500;
 		line-height: 20px;
 		padding-right: 30px;
-		background: url(../img/arrow.png) 73px 6px no-repeat;
+		background: url(../img/arrow.png) 73px 7px no-repeat;
 		&:hover{
 			animation: transition 0.2;
 			color: #248cec;
-			background: url(../img/arrow_h.png) 78px 6px no-repeat;
+			background: url(../img/arrow_h.png) 78px 7px no-repeat;
 		}
 	}
 }
@@ -368,6 +368,7 @@ a{
 		}
 		&__l{
 			display: block;
+			position: relative;
 			height: 320px;
 			width: 260px;
 			margin-bottom: -60px;
@@ -377,36 +378,49 @@ a{
 			font-weight: 500;
 			line-height: 20px;
 			&:hover{
-				transition: all 0.5s;
 				color: #f4b60d;
-				background: url(../img/about_h.png) no-repeat;
+			}
+			&:hover .services-block__item__l__i img{
+				transition: all 0.3s;
+				opacity: 0.1;
+			}
+			&:hover .services-block--hover__plus, .services-block--hover__plus:before, .services-block--hover__plus:after{
+				transition: all 0.3s;
+				opacity: 1;
 			}
 			&__i{
-				height: 320px;
+				height: 260px;
 				width: 260px;
+				background-color: #248cec;
 			}
 			span{
 				display: block;
-				margin-top: -30px;
+				margin-top: 28px;
 			}
 		}
 	}
-}
-
-.services__img1{
-	background: url(../img/about_img1.jpg) no-repeat;
-}
-
-.services__img2{
-	background: url(../img/about_img2.jpg) no-repeat;
-}
-
-.services__img3{
-	background: url(../img/about_img3.jpg) no-repeat;
-}
-
-.services__img4{
-	background: url(../img/about_img4.jpg) no-repeat;
+	&--hover__plus{
+		position: absolute;
+		margin-left: 43%;
+		margin-top: 48%;
+		opacity: 0;
+	}
+	&--hover__plus:before {
+		content: '';
+		position: absolute;
+		width: 35px;
+		height: 4px;
+		background-color: white;
+	}
+	&--hover__plus:after {
+		content: '';
+		position: absolute;
+		width: 35px;
+		height: 4px;
+		background-color: white;
+		-webkit-transform: rotate(90deg);
+		transform: rotate(90deg);
+	}
 }
 
 .info-wrapper{
@@ -719,11 +733,12 @@ a{
 		}
 	}
 	&__t{
-		padding-left: 27px;
-		padding-right: 32px;
+		padding-left: 23px;
+		margin-right: 37px;
 		&:last-child{
 			padding: 0;
-			margin-left: 385px;
+			margin: 0;
+			margin-left: 388px;
 		}
 	}
 }

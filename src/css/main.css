@@ -274,11 +274,11 @@ a {
     font-weight: 500;
     line-height: 20px;
     padding-right: 30px;
-    background: url(../img/arrow.png) 73px 6px no-repeat; }
+    background: url(../img/arrow.png) 73px 7px no-repeat; }
     .about-block__item__l:hover {
       animation: transition 0.2;
       color: #248cec;
-      background: url(../img/arrow_h.png) 78px 6px no-repeat; }
+      background: url(../img/arrow_h.png) 78px 7px no-repeat; }
 
 .services-wrapper {
   background: #2a2d32; }
@@ -309,6 +309,7 @@ a {
       margin-right: 0; }
     .services-block__item__l {
       display: block;
+      position: relative;
       height: 320px;
       width: 260px;
       margin-bottom: -60px;
@@ -318,27 +319,39 @@ a {
       font-weight: 500;
       line-height: 20px; }
       .services-block__item__l:hover {
-        transition: all 0.5s;
-        color: #f4b60d;
-        background: url(../img/about_h.png) no-repeat; }
+        color: #f4b60d; }
+      .services-block__item__l:hover .services-block__item__l__i img {
+        transition: all 0.3s;
+        opacity: 0.1; }
+      .services-block__item__l:hover .services-block--hover__plus, .services-block__item__l .services-block--hover__plus:before, .services-block__item__l .services-block--hover__plus:after {
+        transition: all 0.3s;
+        opacity: 1; }
       .services-block__item__l__i {
-        height: 320px;
-        width: 260px; }
+        height: 260px;
+        width: 260px;
+        background-color: #248cec; }
       .services-block__item__l span {
         display: block;
-        margin-top: -30px; }
-
-.services__img1 {
-  background: url(../img/about_img1.jpg) no-repeat; }
-
-.services__img2 {
-  background: url(../img/about_img2.jpg) no-repeat; }
-
-.services__img3 {
-  background: url(../img/about_img3.jpg) no-repeat; }
-
-.services__img4 {
-  background: url(../img/about_img4.jpg) no-repeat; }
+        margin-top: 28px; }
+  .services-block--hover__plus {
+    position: absolute;
+    margin-left: 43%;
+    margin-top: 48%;
+    opacity: 0; }
+  .services-block--hover__plus:before {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 4px;
+    background-color: white; }
+  .services-block--hover__plus:after {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 4px;
+    background-color: white;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg); }
 
 .info-wrapper {
   height: 545px;
@@ -606,11 +619,12 @@ a {
     .footer-credits a:hover {
       color: #248cec; }
   .footer-credits__t {
-    padding-left: 27px;
-    padding-right: 32px; }
+    padding-left: 23px;
+    margin-right: 37px; }
     .footer-credits__t:last-child {
       padding: 0;
-      margin-left: 385px; }
+      margin: 0;
+      margin-left: 388px; }
 
 .credits__locationImg {
   background: url("../img/location.png") no-repeat; }

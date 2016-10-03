@@ -26,7 +26,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('scripts', function() {
-	return gulp.src('src/plugins/*.js')
+	return gulp.src(['src/plugins/jquery-3.1.0.min.js', 'src/plugins/jquery.jcarousel.min.js', 'src/plugins/lodash.min.js'])
 	.pipe(concat('plugins.min.js'))
 	.pipe(uglify())
 	.pipe(gulp.dest('src/js'));
@@ -83,7 +83,7 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
 	var buildFonts = gulp.src('src/fonts/**/*')
 	.pipe(gulp.dest('dist/fonts'));
 
-	var buildJs = gulp.src('src/js/**/*')
+	var buildJs = gulp.src(['src/js/plugins.min.js', 'src/js/script.js'])
 	.pipe(concat('script.min.js'))
 	.pipe(uglify())
 	.pipe(gulp.dest('dist/js'));

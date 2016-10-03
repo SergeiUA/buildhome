@@ -29,13 +29,13 @@ $(function () {
 		}
 	});
 
-	$('.banners-block__tab__head').on('click',function() {
+	$('.banners-tab__head').on('click',function() {
 		$(this).closest('.banners-block').find('.tab--active').removeClass('tab--active')
 		.find('.minus--icon').addClass('plus--icon');
 		$(this).closest('.banners-block').find('.tab__text--active').removeClass('tab__text--active');
 		$(this).addClass('tab--active');
 		$(this).find('.plus--icon').removeClass('plus--icon').addClass('minus--icon');
-		$(this).siblings('.banners-block__tab__text').addClass('tab__text--active');
+		$(this).siblings('.banners-tab__text').addClass('tab__text--active');
 	});
 
 });
